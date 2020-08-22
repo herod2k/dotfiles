@@ -1,0 +1,111 @@
+#!/bin/bash
+
+main_monitor="eDP1"
+external_monitor="HDMI1"
+
+main_desktops=("office" "web" "term" "files" "extra")
+external_desktops=("code" "personal" "music" "db" "remote")
+
+main_polibar="mainbar"
+external_polibar="external"
+
+# Destkop used to keep one desktop on the dead monitor
+temp_desktop="TEMP_DESKTOP"
+
+num_monitor=$(xrandr --query | grep -c " connected")
+
+function bootstrap {
+    if [ "$num_monitor" -eq "1" ]; then
+        bspc monitor $main_monitor -d ${main_desktops[@]} ${external_desktops[@]}
+        killall -q polybar
+        while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
+        polybar $main_polibar &
+    fi
+
+    if [ "$num_monitor" -eq "2" ]; then
+        monitors=($(xrandr --query | grep " connected" | awk '{print $1}'));
+        if [[ "${monitors[@]}" =~ "$external_monitor" ]]; then
+            xrandr --output $main_monitor --primary --rotate normal --output $external_monitor --mode 1920x1080 --rotate normal --right-of $main_monitor
+            bspc monitor $main_monitor -d ${main_desktops[@]}
+            bspc monitor $external_monitor -d ${external_desktops[@]}
+            killall -q polybar
+            while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
+            polybar $main_polibar &
+            polybar $external_polibar &
+        fi
+    fi
+}
+
+function reorganize {
+    if [ "$num_monitor" -eq "1" ]; then
+        bspc desktop -f "^1"
+        bspc monitor $external_monitor -a $temp_desktop
+        for desktop in "${external_desktops[@]}"; do
+            bspc desktop $desktop --to-monitor $main_monitor
+        done
+        killall -q polybar
+        while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
+        polybar $main_polibar &
+    fi
+
+    if [ "$num_monitor" -eq "2" ]; then
+        monitors=($(xrandr --query | grep " connected" | awk '{print $1}'));
+        if [[ "${monitors[@]}" =~ "$external_monitor" ]]; then
+            for desktop in "${external_desktops[@]}"; do
+                bspc desktop $desktop --to-monitor $external_monitor
+            done
+            bspc desktop $temp_desktop -r
+            polybar $external_polibar &
+        fi
+    fi
+}
+
+function reorder {
+    if [ "$num_monitor" -eq "1" ]; then
+        bspc monitor $main_monitor -o ${main_desktops[@]} ${external_desktops[@]}
+    fi
+
+    if [ "$num_monitor" -eq "2" ]; then
+        monitors=($(xrandr --query | grep " connected" | awk '{print $1}'));
+        if [[ "${monitors[@]}" =~ "$external_monitor" ]]; then
+            bspc monitor $main_monitor -o ${main_desktops[@]}
+            bspc monitor $external_monitor -o ${external_desktops[@]}
+        fi
+    fi
+}
+
+#workaraound to fix the path for the hwmon that changes everytime
+function hwmonpath {
+    for i in /sys/class/hwmon/hwmon*/temp*_input; do 
+        if [ "$(<$(dirname $i)/name): $(cat ${i%_*}_label 2>/dev/null || echo $(basename ${i%_*}))" = "coretemp: Core 0" ]; then
+             export HWMON_PATH="$i"
+        fi 
+    done
+}
+
+
+function help_command {
+    echo "Monitor management for BSPWM"
+    echo
+    echo "Syntax: ./bsw_monitors"
+    echo "options:"
+    echo "help          This screen"
+    echo "bootstrap     Bootstrap all the desktops and polybars"
+    echo "reorder       Reorder the desktops"
+    echo "reorganize    Reorganize the desktops after plug/unplug a monitor"
+    echo
+}
+
+if [ -z "$1" ] || [ "$1" = "help" ]; then
+    help_command
+elif [ "$1" = "bootstrap" ]; then
+    hwmonpath
+    bootstrap
+elif [ "$1" = "reorganize" ]; then
+    hwmonpath
+    reorganize
+elif [ "$1" = "reorder" ]; then
+    reorder
+else
+    help_command
+fi
