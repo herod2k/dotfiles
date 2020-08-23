@@ -8,7 +8,7 @@ I've changed some of the softwares and part of the configurations files.
 
 The theme has 2 wallpapers included. Unfortunately I didn't find the authors.
 
-**Bonus point**: I've created a script ( [bsw_monitors](.dotfiles/nordicfaint/.config/scripts/bsw_monitors) ) to manage the multimonitor configuration inside bspwm and to reorganize them automatically in case of HDMI plug/unplug.
+**Bonus point**: I've created a script ( [bsw_monitors](.config/scripts/bsw_monitors) ) to manage the multimonitor configuration inside bspwm and to reorganize them automatically in case of HDMI plug/unplug.
 
 ## Screenshots
 
