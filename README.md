@@ -1,4 +1,4 @@
-# Dotfiles
+# H2K Dotfiles
 
 ## Description
 

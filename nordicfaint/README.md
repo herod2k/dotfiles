@@ -4,9 +4,11 @@
 
 Nordic Faint theme for Bspwm, inspired by [u/raj2612](https://www.reddit.com/user/raj2612/) and his theme [Faint](https://www.reddit.com/r/unixporn/comments/hvi0qv/bspwm_faint/) with Nordic color palette, re-adapted to use 1/2 screens and 10 desktops.
 
-I've changed the some of the sofwares and part of the configurations files.
+I've changed some of the softwares and part of the configurations files.
 
-I've created/added a script [bsw_monitors](.dotfiles/nordicfaint/.config/scripts/bsw_monitors) to manage the multimonitor inside bspwm and to reorganize them in case of HDMI plug/unplug.
+The theme has 2 wallpapers included. Unfortunately I didn't find the authors.
+
+**Bonus point**: I've created a script ( [bsw_monitors](.dotfiles/nordicfaint/.config/scripts/bsw_monitors) ) to manage the multimonitor configuration inside bspwm and to reorganize them automatically in case of HDMI plug/unplug.
 
 ## Screenshots
 
@@ -43,7 +45,7 @@ _(More screenshots inside the Screenshots folder)_
 - Multiple screen manager: [Autorandr](https://github.com/phillipberndt/autorandr)
 - Music: Spotify with [ncspot](https://github.com/hrkfdn/ncspot)
 - IM: Telegram with [Nord theme](https://t.me/addtheme/nord_colors) by [u/stropicciare](https://www.reddit.com/user/stropicciare/)
-- Launcher: [Rofi](https://github.com/davatorium/rofi)
+- Launcher: [Rofi](https://github.com/davatorium/rofi) with the [Nord theme](https://github.com/davatorium/rofi-themes/pull/32/files) by [rulrok](https://github.com/rulrok)
 - Clipboard: [Greeclip](https://github.com/erebe/greenclip)
 - Browser: [Firefox](https://www.mozilla.org/en-GB/firefox/new/)
 - Wallpaper manager: [Nitrogen](https://github.com/l3ib/nitrogen)
@@ -63,9 +65,9 @@ For more information about the installed software please take a look at the file
 ## Installation
 
 1. Clone this repository
-2. Replace the `[USERNAME]` with your username from all the configuration files and move them in your `.config` folder. Use 
+2. Replace the `[USERNAME]` with your username from all the configuration files `.config` folder. Use 
 `egrep -lRZ '\[USERNAME\]' . | xargs -0 -l sed -i -e "s/\[USERNAME\]/$USER/g"`. To search and replace it automatically.
-3. Change the variables inside the file `.config/scripts/bsw_monitors`, use the command: `xrandr --query | grep " connected"` to know the names of your screen.
+3. Change the variables inside the file `.config/scripts/bsw_monitors`, use the command: `xrandr --query | grep " connected"` to know the names of your screens.
 4. Configure **autorandr** and setup all your profiles. I personally use `mobile` (single screen) and `dual_home` (dual screen at home)
 5. Copy the files from this folder to your home folder.
 
