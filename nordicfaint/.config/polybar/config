@@ -1,5 +1,5 @@
-include-file = /home/alessandroliguori/.config/polybar/colors
-include-file = /home/alessandroliguori/.config/polybar/modules
+include-file = /home/[USERNAME]/.config/polybar/colors
+include-file = /home/[USERNAME]/.config/polybar/modules
 
 [bar/mainbar]
 monitor=eDP1
