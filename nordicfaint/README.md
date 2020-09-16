@@ -65,7 +65,7 @@ For more information about the installed software please take a look at the file
 ## Installation
 
 1. Clone this repository
-2. Replace the `[USERNAME]` with your username from all the configuration files `.config` folder. Use 
+2. Replace the `alessandroliguori` with your username from all the configuration files `.config` folder. Use 
 `egrep -lRZ '\[USERNAME\]' . | xargs -0 -l sed -i -e "s/\[USERNAME\]/$USER/g"`. To search and replace it automatically.
 3. Change the variables inside the file `.config/scripts/bsw_monitors`, use the command: `xrandr --query | grep " connected"` to know the names of your screens.
 4. Configure **autorandr** and setup all your profiles. I personally use `mobile` (single screen) and `dual_home` (dual screen at home)

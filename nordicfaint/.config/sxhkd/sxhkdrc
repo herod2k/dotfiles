@@ -30,7 +30,7 @@ XF86AudioMicMute
     pactl set-source-mute @DEFAULT_SOURCE@ toggle
 super + {less,greater}
     playerctl {previous,next}
-super + space
+super + space 
     playerctl play-pause
 
 # screenshot keybindings
@@ -122,14 +122,6 @@ super + ctrl + {h,j,k,l}
 # preselect the ratio
 super + ctrl + {1-9}
 	bspc node -o 0.{1-9}
-
-# cancel the preselection for the focused node
-super + ctrl + space
-	bspc node -p cancel
-
-# cancel the preselection for the focused desktop
-super + ctrl + shift + space
-	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
 #
 # move/resize

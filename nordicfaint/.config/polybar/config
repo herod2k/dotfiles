@@ -1,5 +1,5 @@
-include-file = /home/[USERNAME]/.config/polybar/colors
-include-file = /home/[USERNAME]/.config/polybar/modules
+include-file = /home/alessandroliguori/.config/polybar/colors
+include-file = /home/alessandroliguori/.config/polybar/modules
 
 [bar/mainbar]
 monitor=eDP1
@@ -37,7 +37,7 @@ tray-offset-y = 0
 tray-padding = 1
 
 [bar/external]
-monitor=HDMI1
+monitor=DP1
 override-redirect = true
 wm-restack = bspwm
 bottom = false

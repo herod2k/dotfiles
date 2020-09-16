@@ -1,7 +1,7 @@
 #!/bin/bash
 
 main_monitor="eDP1"
-external_monitor="HDMI1"
+external_monitor="DP1"
 
 main_desktops=("office" "web" "term" "files" "extra")
 external_desktops=("code" "personal" "music" "db" "remote")
