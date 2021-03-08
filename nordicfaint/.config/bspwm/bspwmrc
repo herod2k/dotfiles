@@ -3,9 +3,9 @@
 bsw_monitors bootstrap
 nm-applet &
 nitrogen --restore 2> /dev/null
-picom &
 urxvtd &
-#run_dunst &
+thunar --daemon &
+blueman-applet &
 
 bspc config focused_border_color    "#74838c"
 bspc config normal_border_color     "#2E3440"

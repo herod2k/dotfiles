@@ -37,7 +37,7 @@ tray-offset-y = 0
 tray-padding = 1
 
 [bar/external]
-monitor=DP1
+monitor=HDMI1
 override-redirect = true
 wm-restack = bspwm
 bottom = false

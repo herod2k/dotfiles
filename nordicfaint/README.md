@@ -49,7 +49,6 @@ _(More screenshots inside the Screenshots folder)_
 - Clipboard: [Greeclip](https://github.com/erebe/greenclip)
 - Browser: [Firefox](https://www.mozilla.org/en-GB/firefox/new/)
 - Wallpaper manager: [Nitrogen](https://github.com/l3ib/nitrogen)
-- Compositor: [picom-ibhagwan](https://github.com/ibhagwan/picom)
 - Terminal emulator: [rxvt-unicode](http://software.schmorp.de/pkg/rxvt-unicode.html)
 - File browsers: [Ranger](https://github.com/ranger/ranger) and Thunar
 - Screenshots applet/software: [Flameshot](https://github.com/lupoDharkael/flameshot)
