@@ -1,0 +1,6 @@
+xrdb -merge $HOME/.config/X11/Xresources
+nitrogen --restore 2> /dev/null
+urxvtd &
+# nm-applet &
+# dunst &
+xsetroot -cursor_name left_ptr &
