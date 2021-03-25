@@ -1,3 +1,0 @@
-# Xdracula Theme
-
-WIP
