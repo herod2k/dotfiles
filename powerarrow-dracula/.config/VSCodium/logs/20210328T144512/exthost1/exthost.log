@@ -18,3 +18,5 @@
 [2021-03-28 14:45:14.183] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/alessandro/.vscode-oss/extensions/eamodio.gitlens-11.3.0/dist/gitlens
 [2021-03-28 14:45:14.396] [exthost] [info] ExtensionService#_doActivateExtension vscode.github-authentication {"startup":false,"extensionId":{"value":"vscode.github-authentication","_lower":"vscode.github-authentication"},"activationEvent":"onAuthenticationRequest:github"}
 [2021-03-28 14:45:14.396] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/vscodium-bin/resources/app/extensions/github-authentication/dist/extension.js
+[2021-03-28 15:20:13.441] [exthost] [info] extension host terminating: received terminate message from renderer
+[2021-03-28 15:20:14.466] [exthost] [info] exiting with code 0

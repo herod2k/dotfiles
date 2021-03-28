@@ -6,3 +6,4 @@ thunar --daemon &
 picom --experimental-backends -b
 urxvtd &
 blueman-applet & 
+openrazer-daemon

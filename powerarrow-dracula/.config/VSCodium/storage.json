@@ -6,6 +6,7 @@
             "file:///home/alessandro/iTech/phoenix/phoenix"
         ],
         "files2": [
+            "file:///home/alessandro/.config/openrazer/persistence.conf",
             "file:///home/alessandro/.config/awesome/lain/widget/mpd.lua",
             "file:///tmp/xa-1MAS00/INSTALL.md"
         ]
@@ -54,7 +55,6 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "fsPath": "/home/alessandro/.config/awesome",
                                         "external": "file:///home/alessandro/.config/awesome",
                                         "path": "/home/alessandro/.config/awesome",
                                         "scheme": "file"
@@ -75,6 +75,17 @@
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/alessandro/.config/openrazer/persistence.conf",
+                                        "path": "/home/alessandro/.config/openrazer/persistence.conf",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/.config/openrazer/persistence.conf"
                                 },
                                 {
                                     "id": "openRecentFile",
@@ -139,8 +150,7 @@
                     },
                     {
                         "id": "saveAll",
-                        "label": "Save A&&ll",
-                        "enabled": false
+                        "label": "Save A&&ll"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -215,7 +225,8 @@
                     },
                     {
                         "id": "workbench.action.closeFolder",
-                        "label": "Close &&Folder"
+                        "label": "Close &&Folder",
+                        "enabled": false
                     },
                     {
                         "id": "workbench.action.closeWindow",
@@ -411,8 +422,7 @@
                                 },
                                 {
                                     "id": "workbench.action.toggleSidebarVisibility",
-                                    "label": "Show &&Side Bar",
-                                    "checked": true
+                                    "label": "Show &&Side Bar"
                                 },
                                 {
                                     "id": "workbench.action.toggleStatusbarVisibility",
@@ -606,8 +616,7 @@
                 "items": [
                     {
                         "id": "workbench.action.navigateBack",
-                        "label": "&&Back",
-                        "enabled": false
+                        "label": "&&Back"
                     },
                     {
                         "id": "workbench.action.navigateForward",
@@ -685,45 +694,54 @@
                                 },
                                 {
                                     "id": "workbench.action.focusThirdEditorGroup",
-                                    "label": "Group &&3"
+                                    "label": "Group &&3",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "workbench.action.focusFourthEditorGroup",
-                                    "label": "Group &&4"
+                                    "label": "Group &&4",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "workbench.action.focusFifthEditorGroup",
-                                    "label": "Group &&5"
+                                    "label": "Group &&5",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
                                     "id": "workbench.action.focusNextGroup",
-                                    "label": "&&Next Group"
+                                    "label": "&&Next Group",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "workbench.action.focusPreviousGroup",
-                                    "label": "&&Previous Group"
+                                    "label": "&&Previous Group",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
                                     "id": "workbench.action.focusLeftGroup",
-                                    "label": "Group &&Left"
+                                    "label": "Group &&Left",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "workbench.action.focusRightGroup",
-                                    "label": "Group &&Right"
+                                    "label": "Group &&Right",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "workbench.action.focusAboveGroup",
-                                    "label": "Group &&Above"
+                                    "label": "Group &&Above",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "workbench.action.focusBelowGroup",
-                                    "label": "Group &&Below"
+                                    "label": "Group &&Below",
+                                    "enabled": false
                                 }
                             ]
                         }
@@ -1494,14 +1512,13 @@
     "themeBackground": "#282a36",
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///home/alessandro/.config/awesome",
-            "backupPath": "/home/alessandro/.config/VSCodium/Backups/2a9fe914fdee29bb0a6ca0f2f7cb555c",
+            "backupPath": "/home/alessandro/.config/VSCodium/Backups/1616957961522",
             "uiState": {
                 "mode": 1,
-                "x": 5,
-                "y": 23,
-                "width": 952,
-                "height": 1052
+                "x": 4,
+                "y": 22,
+                "width": 1912,
+                "height": 1054
             }
         },
         "openedWindows": []
