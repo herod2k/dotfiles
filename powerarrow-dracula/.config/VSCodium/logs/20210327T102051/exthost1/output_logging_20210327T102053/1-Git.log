@@ -1,0 +1,14 @@
+Looking for git in: git
+Using git 2.31.0 from git
+> git rev-parse --git-dir
+Open repository: /home/alessandro/iTech/phoenix/phoenix
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(upstream:track)%00%(objectname) refs/heads/feature/phoenix-122-edit-partner refs/remotes/feature/phoenix-122-edit-partner
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :docker-compose.yml
+> git ls-files --stage -- /home/alessandro/iTech/phoenix/phoenix/docker-compose.yml
+> git cat-file -s a6dfeb75ce383bb0105aa97846445f6d166808b1
+> git check-ignore -v -z --stdin

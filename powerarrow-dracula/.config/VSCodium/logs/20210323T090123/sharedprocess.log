@@ -1,0 +1,14 @@
+[2021-03-23 09:01:45.012] [sharedprocess] [info] Installing extension: ikappas.phpcs
+[2021-03-23 09:01:45.621] [sharedprocess] [info] Downloaded extension: ikappas.phpcs undefined
+[2021-03-23 09:01:47.457] [sharedprocess] [info] Extracted extension to /home/alessandro/.vscode-oss/extensions/.ikappas.phpcs-1.0.5: ikappas.phpcs
+[2021-03-23 09:01:47.457] [sharedprocess] [info] Renamed to /home/alessandro/.vscode-oss/extensions/ikappas.phpcs-1.0.5
+[2021-03-23 09:01:47.457] [sharedprocess] [info] Installation completed. ikappas.phpcs
+[2021-03-23 09:01:47.466] [sharedprocess] [info] Extensions installed successfully: ikappas.phpcs
+[2021-03-23 09:02:04.055] [sharedprocess] [info] Starting to clean up unused language packs.
+[2021-03-23 09:02:44.985] [sharedprocess] [info] Installing extension: eamodio.gitlens
+[2021-03-23 09:02:45.315] [sharedprocess] [info] Downloaded extension: eamodio.gitlens undefined
+[2021-03-23 09:02:45.535] [sharedprocess] [info] Extracted extension to /home/alessandro/.vscode-oss/extensions/.eamodio.gitlens-11.3.0: eamodio.gitlens
+[2021-03-23 09:02:45.535] [sharedprocess] [info] Renamed to /home/alessandro/.vscode-oss/extensions/eamodio.gitlens-11.3.0
+[2021-03-23 09:02:45.545] [sharedprocess] [info] Installation completed. eamodio.gitlens
+[2021-03-23 09:02:45.557] [sharedprocess] [info] Extensions installed successfully: eamodio.gitlens
+[2021-03-23 18:08:10.608] [sharedprocess] [error] ptyHost terminated unexpectedly with code null

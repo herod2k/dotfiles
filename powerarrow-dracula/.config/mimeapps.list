@@ -1,0 +1,7 @@
+[Default Applications]
+x-scheme-handler/tg=userapp-Telegram Desktop-943X00.desktop
+
+[Added Associations]
+x-scheme-handler/tg=userapp-Telegram Desktop-943X00.desktop;
+application/zip=xarchiver.desktop;
+text/calendar=thunderbird.desktop;
