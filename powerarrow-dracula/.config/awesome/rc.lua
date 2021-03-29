@@ -227,6 +227,10 @@ globalkeys = my_table.join(
     awful.key({}, "XF86AudioRaiseVolume", function () awful.util.spawn("amixer -D pulse sset Master 2%+", false) end),
     awful.key({}, "XF86AudioLowerVolume", function () awful.util.spawn("amixer -D pulse sset Master 2%-", false) end),
     awful.key({}, "XF86AudioMute", function () awful.util.spawn("amixer -D pulse sset Master toggle", false) end),
+    awful.key({}, "XF86AudioNext", function () awful.util.spawn("playerctl next", false) end),
+    awful.key({}, "XF86AudioPrev", function () awful.util.spawn("playerctl previous", false) end),
+    awful.key({}, "XF86AudioPlay", function () awful.util.spawn("playerctl play-pause", false) end),
+    awful.key({}, "XF86AudioStop", function () awful.util.spawn("playerctl stop", false) end),
 
     -- System key bindings
     awful.key({ modkey,          }, "s",      hotkeys_popup.show_help,
