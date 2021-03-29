@@ -1,5 +1,5 @@
 volume = 65535
-shuffle = false
+shuffle = true
 repeat = 'off'
 
 [[queue]]

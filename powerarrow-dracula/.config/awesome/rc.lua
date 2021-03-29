@@ -81,7 +81,7 @@ local editor       = os.getenv("EDITOR") or "vim"
 local scrlocker    = "slock"
 
 awful.util.terminal = terminal
-awful.util.tagnames = { "", "", "", "", "", "", "" }
+awful.util.tagnames = { "", "", "", "", "", "", "", "" }
 awful.layout.layouts = {
     awful.layout.suit.tile,
     awful.layout.suit.tile.left,
@@ -224,9 +224,9 @@ globalkeys = my_table.join(
     awful.key({ modkey, "Shift" }, "p", function () awful.util.spawn("flameshot gui") end),
     awful.key({ modkey, "Control" }, "o", function () awful.util.spawn("rofi -modi 'clipboard:greenclip print' -show clipboard -run-command '{cmd}'") end),
     awful.key({ modkey, "Control" }, "s", function () awful.util.spawn("urxvtc -e ncspot") end),
-    awful.key({}, "XF86AudioRaiseVolume", function() volume_widget:inc() end),
-    awful.key({}, "XF86AudioLowerVolume", function() volume_widget:dec() end),
-    awful.key({}, "XF86AudioMute",        function() volume_widget:toggle() end),
+    awful.key({}, "XF86AudioRaiseVolume", function () awful.util.spawn("amixer -D pulse sset Master 2%+", false) end),
+    awful.key({}, "XF86AudioLowerVolume", function () awful.util.spawn("amixer -D pulse sset Master 2%-", false) end),
+    awful.key({}, "XF86AudioMute", function () awful.util.spawn("amixer -D pulse sset Master toggle", false) end),
 
     -- System key bindings
     awful.key({ modkey,          }, "s",      hotkeys_popup.show_help,
@@ -456,6 +456,39 @@ awful.rules.rules = {
      }
     },
     
+    -- Floating clients.
+    { rule_any = {
+        instance = {
+          "DTA",  -- Firefox addon DownThemAll.
+          "copyq",  -- Includes session name in class.
+          "pinentry",
+        },
+        class = {
+          "Arandr",
+          "Blueman-manager",
+          "Gpick",
+          "Kruler",
+          "MessageWin",  -- kalarm.
+          "Sxiv",
+          "Tor Browser", -- Needs a fixed window size to avoid fingerprinting by screen size.
+          "Wpa_gui",
+          "veromix",
+          "Wally",
+	  "zoom",
+          "xtightvncviewer"},
+
+        -- Note that the name property shown in xprop might be set slightly after creation of the client
+        -- and the name shown there might not match defined rules here.
+        name = {
+          "Event Tester",  -- xev.
+        },
+        role = {
+          "AlarmWindow",  -- Thunderbird's calendar.
+          "ConfigManager",  -- Thunderbird's about:config.
+          "pop-up",       -- e.g. Google Chrome's (detached) Developer Tools.
+        }
+      }, properties = { floating = true }},
+
     -- Titlebars
     { rule_any = { type = { "dialog", "normal" } },
       properties = { titlebars_enabled = false } },
