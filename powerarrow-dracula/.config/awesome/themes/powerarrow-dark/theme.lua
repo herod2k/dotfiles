@@ -10,7 +10,7 @@ local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 
 local theme                                     = {}
 theme.dir                                       = os.getenv("HOME") .. "/.config/awesome/themes/powerarrow-dark"
-theme.wallpaper                                 = theme.dir .. "/wall2.jpg"
+theme.wallpaper                                 = theme.dir .. "/wall4.jpg"
 theme.font                                      = "Terminus 9"
 theme.fg_normal                                 = "#f8f8f2"
 theme.fg_focus                                  = "#bd93f9"
@@ -253,7 +253,7 @@ function theme.at_screen_connect(s)
     if type(wallpaper) == "function" then
         wallpaper = wallpaper(s)
     end
-    gears.wallpaper.maximized(wallpaper, s, true)
+    gears.wallpaper.maximized(wallpaper, s, false)
 
     -- Tags
     awful.tag(awful.util.tagnames, s, awful.layout.layouts[1])

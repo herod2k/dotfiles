@@ -1,8 +1,10 @@
 xrandr --setprovideroutputsource modesetting NVIDIA-0
 xrandr --auto
 xrdb -merge ~/.Xresources
-nm-applet &
-thunar --daemon &
+nm-applet & 
+thunar --daemon & 
 picom --experimental-backends -b
+#picom -b
 urxvtd &
 blueman-applet & 
+ibus-daemon --xim -d

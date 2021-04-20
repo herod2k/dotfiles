@@ -498,7 +498,7 @@ awful.rules.rules = {
       properties = { titlebars_enabled = false } },
 
     -- Map softwares to the specific tag
-    { rule = { class = "Firefox" },
+    { rule = { class = "Google-chrome" },
       properties = { screen = 1, tag = awful.util.tagnames[2] } },
     { rule = { class = "TelegramDesktop" },
       properties = { screen = 1, tag = awful.util.tagnames[1] } },
