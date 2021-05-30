@@ -589,9 +589,9 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 
 -- Focus urgent clients automatically
-client.connect_signal("property::urgent", function(c)
-	c.minimized = false
-	c:jump_to()
-end)
+-- client.connect_signal("property::urgent", function(c)
+--	c.minimized = false
+--	c:jump_to()
+-- end)
 
 beautiful.taglist_font = "Terminus 14"
