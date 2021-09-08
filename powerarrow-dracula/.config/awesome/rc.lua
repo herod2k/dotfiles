@@ -223,6 +223,7 @@ globalkeys = my_table.join(
     -- Custom key bindings
     awful.key({ modkey, "Shift" }, "p", function () awful.util.spawn("flameshot gui") end),
     awful.key({ modkey, "Control" }, "o", function () awful.util.spawn("rofi -modi 'clipboard:greenclip print' -show clipboard -run-command '{cmd}'") end),
+    awful.key({ modkey, "Control" }, "l", function () awful.util.spawn("xscreensaver-command -lock") end),
     awful.key({ modkey, "Control" }, "s", function () awful.util.spawn("urxvtc -e ncspot") end),
     awful.key({}, "XF86AudioRaiseVolume", function () awful.util.spawn("amixer -D pulse sset Master 2%+", false) end),
     awful.key({}, "XF86AudioLowerVolume", function () awful.util.spawn("amixer -D pulse sset Master 2%-", false) end),

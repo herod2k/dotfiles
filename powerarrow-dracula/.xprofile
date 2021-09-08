@@ -8,3 +8,4 @@ picom --experimental-backends -b
 urxvtd &
 blueman-applet & 
 ibus-daemon --xim -d
+#xscreensaver -no-splash &

@@ -25,10 +25,6 @@ Xft.autohint: true
 Xft.hintstyle: hintfull 
 Xft.lcdfilter: lcdfilter
 
-! Rofi
-
-rofi.dpi: 192 
-
 ! URxvt
 
 URxvt.scrollBar: false
